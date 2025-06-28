@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "prisma": "^6.7.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.8.0"
+  }
+}
