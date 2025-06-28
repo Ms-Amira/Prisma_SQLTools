@@ -131,3 +131,7 @@ To get running from scratch:
 ✅ Create .env
 ✅ Migrate + seed the database
 ✅ Start both servers
+
+✨ Animated Border Gradient Glow
+
+This project features a custom animated gradient glow inspired by Animated Border Gradient Glow from FreeFrontend.

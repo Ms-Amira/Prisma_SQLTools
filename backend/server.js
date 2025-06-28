@@ -8,13 +8,30 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/api/data', async (req, res)=>{
-  try{
+app.get('/adopters', async (req, res) => {
+  try {
     const data = await prisma.adopter.findMany();
-    return res.json(data);
-  } catch(error) {
-    console.error('Error fetching data: ', error);
-    res.status(500).json({error: 'Internal server error'});
+    res.json(data);
+  } catch (error) {
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+app.get('/pets', async (req, res) => {
+  try {
+    const pets = await prisma.pet.findMany();
+    res.json(pets);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch pets' });
+  }
+});
+
+app.get('/shelters', async (req, res) => {
+  try {
+    const shelters = await prisma.shelter.findMany();
+    res.json(shelters);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch shelters' });
   }
 });
 

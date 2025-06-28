@@ -2,12 +2,53 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Pet Adoption</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="app"></div>
+    <h1>Adopters</h1>
+<table id="adoptersTable" border="2">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>Animals in Home</th>
+      <th>Approval</th>
+    </tr>
+  </thead>
+  <tbody id="adopters"></tbody>
+</table>
+  <h1>Pet</h1>
+<table id="petsTable" border="2">
+   <thead>
+    <tr>
+      <th>Name</th>
+      <th>Species</th>
+      <th>Breed</th>
+      <th>Age</th>
+      <th>Medical History</th>
+    </tr>
+  </thead>
+  <tbody id="pets"></tbody>
+</table>
+      <h1>Shelters</h1>
+      <table id="sheltersTable" border="2">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone Number</th>
+      <th>Capacity</th>
+      <th>Website</th>
+    </tr>
+  </thead>
+  <tbody id="shelters"></tbody>
+</table>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

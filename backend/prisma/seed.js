@@ -5,7 +5,9 @@ const prisma = new PrismaClient();
 
 async function main() {
 
+  await prisma.pet.deleteMany();
   await prisma.adopter.deleteMany();
+  await prisma.shelter.deleteMany();
 
 
   const adopters = [];
