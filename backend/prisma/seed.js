@@ -1,4 +1,4 @@
-const { PrismaClient } = require('@prisma/client');
+const { PrismaClient } = require('../generated/prisma');
 const { faker } = require('@faker-js/faker');
 
 const prisma = new PrismaClient();
@@ -14,8 +14,8 @@ async function main() {
       data: {
         name: faker.person.fullName(),
         email: faker.internet.email(),
-        phoneNumber: faker.phone.phoneNumber(),
-        animalsInHome: faker.helpers.rangeToNumber({ min: 0, max: 100 }),
+        phoneNumber: faker.phone.number(),
+        animalsInHome: faker.helpers.rangeToNumber({ min: 0, max: 10 }),
         approval: faker.helpers.arrayElement(['PENDING', 'APPROVED', 'REJECTED'])
       },
     });

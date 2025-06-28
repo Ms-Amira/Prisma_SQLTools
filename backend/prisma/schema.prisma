@@ -1,5 +1,6 @@
 generator client {
   provider = "prisma-client-js"
+    output   = "../generated/prisma"
 }
 
 datasource db {
@@ -11,8 +12,8 @@ model Adopter {
   id        Int      @id @default(autoincrement())
   name      String
   email     String   @unique
-  phoneNumber Int @unique
-  animalsInHome String
+  phoneNumber String @unique
+  animalsInHome Int
   approval ApprovalStatus
   pets Pet[]
 }
@@ -34,7 +35,7 @@ model Shelter {
   id        Int      @id @default(autoincrement())
   name      String
   address String
-  phoneNumber Int
+  phoneNumber String @unique
   capacity Int
   website String
   pets Pet[]
