@@ -14,7 +14,7 @@ async function main() {
       data: {
         name: faker.person.fullName(),
         email: faker.internet.email(),
-        phoneNumber: faker.phone.number(),
+        phoneNumber: faker.phone.number({ style: 'national' }),
         animalsInHome: faker.helpers.rangeToNumber({ min: 0, max: 10 }),
         approval: faker.helpers.arrayElement(['PENDING', 'APPROVED', 'REJECTED'])
       },
@@ -45,7 +45,7 @@ async function main() {
       data: {
         name: faker.company.name(),
         address: `${faker.location.streetAddress()}, ${faker.location.city()}, ${faker.location.state()}`,
-        phoneNumber: faker.phone.number(),
+        phoneNumber: faker.phone.number({ style: 'national' }),
         capacity: faker.helpers.rangeToNumber({ min: 0, max: 100 }),
         website: faker.internet.domainName()
       },
